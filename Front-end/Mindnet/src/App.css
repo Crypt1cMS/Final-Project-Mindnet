@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+main {
+  display: flex;
+  font-family: sans-serif;
+  background-color: #FBFEFC;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.img1 {
+  width: 1px;
+  height: 10px;
+  object-fit: cover;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+#btn-arrow-main {
+  width: 70%;
+  min-width: 150px;
+  height: 45px;
+  color: #FBFEFC;
+  padding: 10px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  outline: none;
+  overflow: hidden;
+  border-radius: 15px;
+  border-style: solid;
+  border-color: #52C771;
+  background-color: #52C771;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#btn-arrow-main:hover {
+  border-radius: 15px;
+  padding-right: 38px;
+  padding-left: 8px;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+#btn-arrow-main:hover:after {
+  opacity: 1;
+  right: 10px;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+#btn-arrow-main:after {
+  content: "\00BB";
+  position: absolute;
+  opacity: 0;
+  font-size: 20px;
+  line-height: 38px;
+  top: 0;
+  right: -20px;
+  transition: 0.4s;
 }
