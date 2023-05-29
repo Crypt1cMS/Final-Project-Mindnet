@@ -32,9 +32,9 @@ function App() {
                 </div>
 
                 <div className="date-group">
-                    <input type="text" placeholder="Dia" name="Dia" required />
-                    <input type="text" placeholder="Mes" name="Mes" required />
-                    <input type="text" placeholder="Año" name="Año" required />
+                    <input type="number" placeholder="Dia" name="Dia" required />
+                    <input type="number" placeholder="Mes" name="Mes" required />
+                    <input type="number" placeholder="Año" name="Año" required />
                 </div>
                 <div className="button-group">
                     <button type="submit" className="primary-button">Registrate Ahora</button>
