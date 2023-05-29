@@ -19,6 +19,11 @@
     
 }
 
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
 h1 {
     font-size: 42px;
 }
@@ -45,12 +50,11 @@ input[type="password"] {
 main {
     display: flex;
     height: 100vh;
-    width: 100vw;
 
 }
 
 .img1 {
-    width: 50vw;
+    width: 50%;
     /* background: url(../public/signup1.jpg) no-repeat; */
 }
 
@@ -61,7 +65,7 @@ main {
   }
 
 .container{
-    width: 50vw;
+    width: 50%;
     background-color: var(--main-background-color);
     display: flex;
     flex-direction: column;
