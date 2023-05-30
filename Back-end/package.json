@@ -1,17 +1,16 @@
 {
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.18.2",
-    "mongoose": "^7.2.0"
-  },
   "name": "back-end",
   "version": "1.0.0",
+  "description": "base de datos y back end",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
-    "test": "start"
+    "start": "nodemon src/index.js" 
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.2.1",
+    "nodemon": "^2.0.22"
+  }
 }
