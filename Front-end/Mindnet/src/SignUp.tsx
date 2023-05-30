@@ -1,5 +1,5 @@
-import "./RegisterPage.css"
-
+import "./global.css"
+import "./SignUp.css"
 function App() {
   return (
     <main>
