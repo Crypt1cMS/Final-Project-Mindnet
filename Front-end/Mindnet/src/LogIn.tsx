@@ -1,4 +1,5 @@
 import "./global.css"
+import "./LogIn.css"
 
 function LogIn() {
     return(
@@ -29,9 +30,10 @@ function LogIn() {
                   </div>
   
                   <div className="button-group">
-                      <button type="submit" className="secondary-button">Iniciar Sesión</button>
-                      <p>O</p>
-                      <button type="submit" className="primary-button">Registrate Ahora</button>
+                      <button type="submit" className="primary-button">Iniciar Sesión</button>
+                      <a href="#" className="secondary-link">¿Olvidaste tu contraseña?</a>
+                      <hr className="form-divider" />
+                      <button type="submit" className="secondary-button">Registrate Ahora</button>
 
                   </div>
               </form>
