@@ -1,6 +1,6 @@
 import "./RegisterPage.css"
 
-function RegisterPage() {
+function App() {
   return (
     <main>
       <div className="img1">
@@ -49,4 +49,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage
+export default App
