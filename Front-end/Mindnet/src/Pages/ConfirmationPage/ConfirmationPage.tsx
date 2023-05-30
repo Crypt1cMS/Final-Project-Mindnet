@@ -12,12 +12,10 @@ function App() {
         <div className='container'>
           <h1 id="logo">Mind<span id="logo-highlight">Net</span></h1>
             <div className='hero-content'>
-              <h2 id='hero-title'>Bienvenido a Mindnet!</h2>
+              <h2 id='hero-title'>¡Bienvenido a Mindnet!</h2>
               <p id='hero-text'>Verifica tu dirreción de correo electrónico para acceder a tu cuenta y comenzar a usar MindNet</p>
             </div>
-              <div className='btn-main'>
-                <button type='submit'>Confirma tu correo electrónico</button>
-              </div>
+                <button className="btn-main" type='submit'>Confirma tu correo electrónico</button>
         </div>
   </main>
   );

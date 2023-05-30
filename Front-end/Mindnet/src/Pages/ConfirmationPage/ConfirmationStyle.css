@@ -113,10 +113,10 @@ main {
 
 .btn-main {
   background-color: var(--main-primary-button);
-  color: var(  --secondary-text-color);
+  color: var(--main-text-color);
   border-radius: 100px;
   padding: 15px;
-  font-size: 18px;
+  font-size: 1px;
   font-weight: 600;
   width: 60%;
   align-items: center;

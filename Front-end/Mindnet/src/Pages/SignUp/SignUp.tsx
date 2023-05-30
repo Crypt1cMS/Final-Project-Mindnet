@@ -1,6 +1,7 @@
-import "./RegisterPage.css"
+import "./SignUp.css"
+import "./global.css"
 
-function App() {
+function SignUp() {
   return (
     <main>
       <div className="img1">
@@ -49,4 +50,4 @@ function App() {
   );
 }
 
-export default App
+export default SignUp
