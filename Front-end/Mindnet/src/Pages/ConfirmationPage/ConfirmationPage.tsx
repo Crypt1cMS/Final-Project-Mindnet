@@ -1,5 +1,6 @@
 import './ConfirmationStyle.css'
 import '../../../public/laptop1.png'
+import '../../global.css'
 
 function App() {
   return (
