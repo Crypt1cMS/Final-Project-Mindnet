@@ -30,7 +30,7 @@ h1 {
 
 input[type="text"] {
     height: 50px;
-    width: 230px;
+    width: 320px;
     background: #EEF2EF;
     border-radius: 100px;
     padding: 15px;
@@ -67,6 +67,10 @@ input[type="password"] {
     cursor: pointer;
 }
 
+.primary-button:hover {
+    background-color: #92d7a4;
+}
+
 .secondary-button {
     background-color: var(--main-secondary-button);
     color: var(--main-text-color);
@@ -78,9 +82,14 @@ input[type="password"] {
     cursor: pointer;
 }
 
+.secondary-button:hover {
+    background-color: #92d7a4;
+}
+
+
 .secondary-link {
     font-style: italic;
     color: var(--main-text-color);
     text-decoration: none;
-    font-size: 12px;
+    font-size: 16px;
 }
