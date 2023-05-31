@@ -68,6 +68,12 @@ main {
 
 .button-group .primary-button {
     width: 100%;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background-color: #92d7a4;
+    cursor: pointer;
 }
 
 .secondary-link {
@@ -83,4 +89,12 @@ main {
     margin-bottom: 39px;
 
     border: 1px solid var(--secondary-text-color);
+}
+
+.secondary-button {
+    cursor: pointer;
+}
+
+.secondary-button:hover {
+    background-color: #92d7a4;
 }

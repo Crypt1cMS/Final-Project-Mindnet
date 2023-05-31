@@ -1,4 +1,4 @@
-import "./global.css"
+import "../global.css"
 import "./LogIn.css"
 
 function LogIn() {

@@ -2,7 +2,7 @@ import './ConfirmationStyle.css'
 import '../../../public/laptop1.png'
 import '../../global.css'
 
-function App() {
+function ConfirmationPage() {
   return (
 
   <main>
@@ -13,8 +13,8 @@ function App() {
         <div className='container'>
           <h1 id="logo">Mind<span id="logo-highlight">Net</span></h1>
             <div className='hero-content'>
-              <h2 id='hero-title'>¡Bienvenido a Mindnet!</h2>
-              <p id='hero-text'>Verifica tu dirreción de correo electrónico para acceder a tu cuenta y comenzar a usar MindNet</p>
+              <h2 id='subtitle'>¡Bienvenido a Mindnet!</h2>
+              <p id='subtext'>Verifica tu dirreción de correo electrónico para acceder a tu cuenta y comenzar a usar MindNet</p>
             </div>
                 <button className="btn-main" type='submit'>Confirma tu correo electrónico</button>
         </div>
@@ -22,4 +22,4 @@ function App() {
   );
 }
 
-export default App
+export default ConfirmationPage
