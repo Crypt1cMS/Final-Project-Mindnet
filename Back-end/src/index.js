@@ -1,12 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const app =  express();
+const cors= require('cors');
 const rutaUsuario = require("./routes/user");
+const rutaAuth =require('./routes/auth')
 
-
+//JSON.stringify()
 const port =(9000);
 const password = 'mongo2804';
 const username = 'gustavo2804';
+
+
 
 //routes
 app.get("/",(req,res)=>{
@@ -16,7 +20,9 @@ app.get("/",(req,res)=>{
 
 // middlerware
 app.use(express.json())
+app.use(cors());
 app.use('/api', rutaUsuario);
+app.use('/api/auth',rutaAuth);
 
 
 //mongoose connection
