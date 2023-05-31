@@ -1,16 +1,15 @@
 const express = require('express');
-const usuarioSchema = require("../models/usuario");
+const Usuario = require("../models/usuario");
+const {check} = require('express-validator');
+const validarCampos = require('../../middlewares/validar-campos');
+const { crearUsuario } = require('../controllers/crearuser');
 
 const router  = express.Router();
 
 //crear usuario
-router.post('/users',(req,res)=>{
-    const usuario = usuarioSchema(req.body);
-    usuario
-    .save()
-    .then((data)=> res.json(data))
-    .catch((error)=> res.json({message:error}))
-});
+router.post('/users',check('email','esto no es un correo valido').isEmail()
+, validarCampos, crearUsuario
+);
 
 //obtener todos los usuario
 router.get('/users',(req,res)=>{
@@ -22,10 +21,10 @@ router.get('/users',(req,res)=>{
 });
 
 //obtener un usuario especifco
-router.get('/users/:id',(req, res)=>{
-    const {id } =req.params;
+router.get('/users/:email',(req, res)=>{
+    const {email} =req.params;
     usuarioSchema
-    .findById(id)
+    .findOne(email)
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))
 
