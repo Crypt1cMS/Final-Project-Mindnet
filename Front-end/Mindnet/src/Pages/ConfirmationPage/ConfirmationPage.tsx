@@ -1,5 +1,5 @@
-import './App.css'
-import '../public/laptop1.png'
+import './ConfirmationStyle.css'
+import '../../../public/laptop1.png'
 
 function App() {
   return (
