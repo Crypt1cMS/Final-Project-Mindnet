@@ -1,5 +1,5 @@
 import "./SignUp.css"
-import "../global.css"
+import "../../global.css"
 
 function SignUp() {
   return (

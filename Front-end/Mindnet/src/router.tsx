@@ -1,5 +1,6 @@
 import {Link} from 'react-router-dom'
-import Paths from './Paths.js'
+import Paths from './Paths.tsx'
+
 
 function router() {
     return (
@@ -12,10 +13,11 @@ function router() {
               <li><Link to="/SignUp"> Sign-Up page </Link></li>
               <li><Link to="/LogIn"> Login page </Link></li>
               <li><Link to="/ConfirmationPage"> Confirmation page </Link></li>
+              <li><Link to="/ForgotPassword"> Forgot Password page </Link></li>
             </ul>
              
           </main>
-          <Paths/>
+          <Paths />
         </div>
       </>
     );
