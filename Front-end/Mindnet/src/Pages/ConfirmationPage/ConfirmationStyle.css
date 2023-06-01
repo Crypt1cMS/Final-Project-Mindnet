@@ -39,7 +39,9 @@ h1 {
 
 main {
   display: flex;
-  height: calc(100vh - 4px);
+  height: 100vh;
+  overflow: hidden;
+
 }
 
 .img1 {

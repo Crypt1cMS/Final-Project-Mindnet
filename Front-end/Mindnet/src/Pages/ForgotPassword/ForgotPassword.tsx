@@ -1,4 +1,4 @@
-import "../global.css"
+import "../../global.css"
 import "./ForgotPassword.css"
 
 function ForgotPassword() {
@@ -22,7 +22,7 @@ function ForgotPassword() {
                           required
                       />
 
-                      <p id="p-divider"><em>o</em></p>
+                      <p id="p-divider">o</p>
   
                       <input
                           type="text"
