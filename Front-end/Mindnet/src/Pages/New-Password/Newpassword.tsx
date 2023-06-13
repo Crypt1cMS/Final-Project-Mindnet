@@ -1,5 +1,5 @@
 import "../../global.css"
-import "./Newpasswoed.css"
+import "./Newpassword.css"
 
 function Newpassword() {
     return(
@@ -9,7 +9,7 @@ function Newpassword() {
             </div>
   
             <div className="container">
-                <h1 id="logo">Mind<span id="logo-highlight">Net</span></h1>
+                <h1 id="logo">Hello <span id="logo-highlight">Name lastname</span></h1>
                 <h2 id="emailsent">Correo de recuperación de contraseña enviado</h2>
                 <p>Se envió un mensaje a tu correo electrónico <strong>C•••••••••@•••••••.com</strong></p>
                 <p>Sigue las instrucciones del mensaje para restablecer la contraseña.</p>
