@@ -1,19 +1,32 @@
-import "../../global.css"
 import "./Newpassword.css"
 
 function Newpassword() {
     return(
         <main>
             <div className="img1">
-                <img src="../public/Newpassword.jpg" alt="Open laptop on a desk" id="MsgForgotpass-image"/>
+                <img src="../public/Newpassword.jpg" alt="Open laptop on a desk" id="Newpassword-image"/>
             </div>
   
             <div className="container">
-                <h1 id="logo">Hello <span id="logo-highlight">Name lastname</span></h1>
-                <h2 id="emailsent">Correo de recuperación de contraseña enviado</h2>
-                <p>Se envió un mensaje a tu correo electrónico <strong>C•••••••••@•••••••.com</strong></p>
-                <p>Sigue las instrucciones del mensaje para restablecer la contraseña.</p>
-                <button type="submit" id="btn-main">Aceptar</button>
+                <h1 id="logo">Hola <span id="logo-highlight">Name Lastname!</span></h1>
+                <p><em>Establece tu nueva contraseña a continuación</em></p>
+
+                    <input className="password"
+                        type="password"
+                        placeholder="Nueva contraseña"
+                        name="contraseña"
+                        required
+                    />
+
+                    <input
+                        type="password"
+                        placeholder="Repetir contraseña"
+                        name="contraseña"
+                        required
+                    />
+                
+                <button type="submit" id="btn-main">Guardar cambios</button>
+
             </div>
         </main>
     )
