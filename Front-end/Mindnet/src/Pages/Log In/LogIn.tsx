@@ -1,5 +1,7 @@
+import { Link } from "react-router-dom"
 import "../../global.css"
 import "./LogIn.css"
+
 
 function LogIn() {
     return(
@@ -33,10 +35,11 @@ function LogIn() {
                       <button type="submit" className="primary-button">Iniciar Sesión</button>
                       <a href="#" className="secondary-link">¿Olvidaste tu contraseña?</a>
                       <hr className="form-divider" />
-                      <button type="submit" className="secondary-button">Registrate Ahora</button>
+                      
 
                   </div>
               </form>
+                <Link to={`/signup`}><button type="submit" className="secondary-button">Registrate Ahora</button></Link>
         </div>
   
         <div></div>
