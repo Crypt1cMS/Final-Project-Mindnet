@@ -1,5 +1,6 @@
 import "./SignUp.css"
 import "../../global.css"
+import { Link } from "react-router-dom"
 
 function SignUp() {
   return (
@@ -37,12 +38,12 @@ function SignUp() {
                     <input type="number" placeholder="Mes" name="Mes" required />
                     <input type="number" placeholder="Año" name="Año" required />
                 </div>
+            </form>
                 <div className="button-group">
                     <button type="submit" className="primary-button">Registrate Ahora</button>
                     <p>O</p>
-                    <button type="submit" className="secondary-button">Iniciar Sesión</button>
+                    <Link to={`/`}><button type="submit" className="secondary-button">Iniciar Sesión</button></Link>
                 </div>
-            </form>
       </div>
 
       <div></div>
