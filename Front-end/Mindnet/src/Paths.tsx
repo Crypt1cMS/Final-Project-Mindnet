@@ -1,11 +1,11 @@
 import { Route, Routes, Navigate} from 'react-router-dom'
 import SignUp from './Pages/Sign Up/SignUp.tsx'
-import LogIn from './Pages/Log In/LogIn.tsx'
+import LogIn from './Pages/Log In/LogIn.jsx'
 import ConfirmationPage from './Pages/ConfirmationPage/ConfirmationPage.tsx'
 import ForgotPassword from './Pages/ForgotPassword/ForgotPassword.tsx'
 import MessageForgotpass from './Pages/ForgotPassword/ForgotPassword.tsx'
 import NewPassword from './Pages/New-Password/Newpassword.tsx'
-import Feed from './Pages/Feed/FeedPage.tsx'
+import { Feed } from './Pages/Feed/FeedPage.tsx'
 
 function Rutas () {
     return (
