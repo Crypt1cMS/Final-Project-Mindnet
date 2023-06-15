@@ -1,11 +1,8 @@
 import '../../global.css'
 import './FeedStyle.css'
 
-function feed() {
-    return (
-        <p>Hello</p>
-
-    )
+export const Feed = () => {
+  return (
+    <h1>FeedPage</h1>
+  )
 }
-
-export default feed
