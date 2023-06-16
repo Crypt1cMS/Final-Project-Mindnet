@@ -214,3 +214,60 @@ li {
 #user-info img {
     cursor: pointer;
 }
+
+.sidebar {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    width: 20%;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    padding-top: 32%;
+    background-color: #E0E0E0;
+    width: 100%;
+
+}
+
+#side-searchbar {
+    height: 35px;
+    width: 85%;
+    background-color: white;
+    align-self: center;
+}
+
+.side-header {
+    text-align: left;
+    padding: 5%;
+}
+
+.side-friends {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    margin-bottom: 5%;
+}
+
+.shape {
+    width: 90%;
+    height: 55px;
+    border-radius: 40px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+.shape img {
+    width: 13%;
+    border-radius: 100px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    object-fit: contain
+}
+
