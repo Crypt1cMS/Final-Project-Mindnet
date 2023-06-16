@@ -232,7 +232,7 @@ li {
     margin-bottom: 16px;
 
     width: 740px;
-    height: 780px;
+    min-height: 780px;
 
 
 }
@@ -267,6 +267,7 @@ input.comment-input {
   width: 90%;
   padding: 8px;
   border: 1px solid #cccccc;
+  background-color: #FFFFFF;
   border-radius: 100px;
   margin-right: 8px;
 }
@@ -286,7 +287,7 @@ button.comment-button {
     
 
     position: relative;
-    top: 3.5px;
+    top: 20.5px;
   
 }
 
@@ -299,8 +300,39 @@ button.comment-button {
 }
 
 .post-comments {
-    margin: 10px 10px;
+    margin: 10px 0px;
+    padding: 20px 20px;
+
+    background-color: #FFFFFF;
+    border-radius: 25px;
 }
 .post-comments p {
-  margin-bottom: 8px;
+    margin-bottom: 8px;
+}
+
+.post-comment {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.comment-profile-picture {
+    height: 50px;
+    width: 50px;
+}
+
+.comment-text {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comment-text p {
+    font-size: 0.75rem;
+    max-height: 100px;
+    max-width: 540px;
+    overflow-wrap: anywhere;
 }
