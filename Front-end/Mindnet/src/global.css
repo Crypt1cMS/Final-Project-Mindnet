@@ -272,17 +272,35 @@ input.comment-input {
 }
 
 .comment-button {
-  border: none;
+    border: none;   
+}
 
+button.comment-button {
+    background: none;
+    border: none;
 }
 
 .comment-button img {
-    width: 30px;
+    width: 45px;
     border-radius: 100px;
+    
+
+    position: relative;
+    top: 3.5px;
   
 }
 
+.comment-button img:hover {
+    opacity: 90%;
+    transform: scale(1.1);
+    transition: ease-in;
+    transition-duration: 100ms;
+  
+}
 
+.post-comments {
+    margin: 10px 10px;
+}
 .post-comments p {
   margin-bottom: 8px;
 }
