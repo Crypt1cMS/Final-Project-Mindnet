@@ -268,6 +268,15 @@ li {
     height: 40px;
     margin-left: 10px;
     margin-right: 10px;
-    object-fit: contain
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.side-fname {
+    cursor: pointer;
+}
+
+.side-fname:hover {
+    color: grey;
 }
 

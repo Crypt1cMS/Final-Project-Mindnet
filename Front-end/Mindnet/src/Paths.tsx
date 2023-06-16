@@ -16,9 +16,9 @@ function Rutas () {
             <Route path = '/*' element={<Navigate to="/login"/>} />
             <Route path = '/ConfirmationPage' element={<ConfirmationPage/>} />
             <Route path = '/ForgotPassword' element={<ForgotPassword/>} />
-            <Route path = '/MessageForgotpassword' element={< MessageForgotpass/>} />
+            <Route path = '/MessageForgotpassword' element={<MessageForgotpass/>} />
             <Route path = '/Newpassword' element={<NewPassword/>} />
-            <Route path = '/Feed' element={<Feed/>} />
+            <Route path = '/Feed' element={<Feed/>} />  
         </Routes>
     
     )
