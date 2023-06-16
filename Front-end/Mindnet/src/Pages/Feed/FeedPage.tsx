@@ -4,10 +4,10 @@ import './FeedStyle.css'
 import SocialMediaPost from '../components/post';
 
 const Feed: React.FC = () => {
-  const postImage = 'example.jpg';
+  const postImage = '../../../public/test post image.jpg';
   const postLikes = 10;
   const postComments = [
-    { id: 1, text: 'Great post!', user: { name: 'John Doe', profilePicture: 'john.jpg' } },
+    { id: 1, text: 'Great post!', user: { name: 'John Doe', profilePicture: '../../../public/Test profile image.png' } },
     { id: 2, text: 'Nice photo!', user: { name: 'Jane Smith', profilePicture: 'jane.jpg' } },
   ];
   const postShares = 5;
