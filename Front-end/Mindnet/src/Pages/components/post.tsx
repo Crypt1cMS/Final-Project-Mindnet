@@ -51,9 +51,9 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
         <img className="post-image" src={image} alt="Post" />
 
         <div className="post-buttons">
-          <button>{likes} Like</button>
-          <button>{comments.length} Comment</button>
-          <button>{shares} Share</button>
+          <button className='like-btn'>{likes} Me gusta</button>
+          <button className='comment-btn'>{comments.length} Comentar</button>
+          <button className='share-btn'>{shares} Compartir</button>
         </div>
 
         <div className="comment-section">
@@ -73,16 +73,16 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
 
         <div className="post-comments">
           {postComments.map((comment) => (
-            <div key={comment.id}>
+            <div className="post-comment" key={comment.id}>
               <img
                 className="comment-profile-picture"
                 src={comment.user.profilePicture}
                 alt="Profile"
               />
-              <p>
-                <span className="comment-username">{comment.user.name}</span>{' '}
-                {comment.text}
-              </p>
+              <div className='comment-text'>
+                <h4 className="comment-username">{comment.user.name}</h4>{' '}
+                <p>{comment.text}</p>
+              </div>
             </div>
           ))}
         </div>
