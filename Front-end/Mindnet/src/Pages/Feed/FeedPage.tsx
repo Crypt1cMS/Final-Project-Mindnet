@@ -3,25 +3,22 @@ import './FeedStyle.css'
 
 import SocialMediaPost from '../components/post';
 
-function Feed() {
-
-    const post = {
-        image: '../../../public/test post image.jpg',
-        likes: 10,
-        comments: [
-          { id: 1, text: 'Great post!' },
-          { id: 2, text: 'I love it!' }
-        ],
-        shares: 5
-      };
+const Feed: React.FC = () => {
+  const postImage = 'example.jpg';
+  const postLikes = 10;
+  const postComments = [
+    { id: 1, text: 'Great post!', user: { name: 'John Doe', profilePicture: 'john.jpg' } },
+    { id: 2, text: 'Nice photo!', user: { name: 'Jane Smith', profilePicture: 'jane.jpg' } },
+  ];
+  const postShares = 5;
     
       return (
         <div>
           <SocialMediaPost
-            image={post.image}
-            likes={post.likes}
-            comments={post.comments}
-            shares={post.shares}
+            image={postImage}
+            likes={postLikes}
+            comments={postComments}
+            shares={postShares}
           />
         </div>
       );
