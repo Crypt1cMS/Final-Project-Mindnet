@@ -24,7 +24,6 @@ function LogIn() {
                 ...form,
                 [name]:value
             })
-
           }  
         
         const formPre = (event:any) =>{
@@ -75,7 +74,7 @@ function LogIn() {
   
                   <div className="button-group">
                       <button type="submit" className="primary-button" >Iniciar Sesión</button>
-                      <a href="#" className="secondary-link">¿Olvidaste tu contraseña?</a>
+                      <Link to={`/ForgotPassword`}><p className="secondary-link">¿Olvidaste tu contraseña?</p></Link>
                       <hr className="form-divider" />
                       
 
