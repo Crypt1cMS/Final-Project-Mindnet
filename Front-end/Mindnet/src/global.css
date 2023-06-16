@@ -214,3 +214,75 @@ li {
 #user-info img {
     cursor: pointer;
 }
+
+#posts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social-media-post-card {
+
+    background-color: #575757;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-top: 300px;
+    margin-bottom: 16px;
+
+    width: 740px;
+    height: 780px;
+
+
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-buttons button {
+    width: 211px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: none;
+    color: var(--secondary-text-color);
+    border-radius: 100px;
+    
+}
+
+.comment-section {
+  margin-top: 16px;
+}
+
+input.comment-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  border-radius: 100px;
+  margin-right: 8px;
+}
+
+.comment-button {
+  border: none;
+
+}
+
+.comment-button img {
+    width: 30px;
+    border-radius: 100px;
+  
+}
+
+
+.post-comments p {
+  margin-bottom: 8px;
+}
