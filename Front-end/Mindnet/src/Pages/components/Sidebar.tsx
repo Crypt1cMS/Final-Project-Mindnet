@@ -1,4 +1,3 @@
-import NavBar from "./navbar";
 import '../../global.css'
 import Dylan from '../../../public/side-profile pic.jpg'
 import Carlo from '../../../public/side-carlo2.jpg'
@@ -10,7 +9,6 @@ function Sidebar() {
   return (
 
   <>
-  <NavBar/>
     <div className="sidebar">
       
       <div className="sidebar-menu">
