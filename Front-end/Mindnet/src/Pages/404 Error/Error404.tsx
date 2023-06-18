@@ -19,7 +19,7 @@ function Error404 () {
           </div>
 
           <div id='btn-main'>
-            <Link to={"/LogIn"}><button type='submit'>Regresar a la pagina de inicio</button></Link>
+            <Link to={"/Feed"}><button type='submit'>Regresar a la pagina de inicio</button></Link>
           </div>
 
           <div id='footer'>

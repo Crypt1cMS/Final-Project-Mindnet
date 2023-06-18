@@ -2,16 +2,18 @@ import '../../global.css'
 import { Link } from "react-router-dom"
 
 // placeholder object for testing
-// const user = {
-//     follows: 500 + ' following',
-//     followers: 1000 + ' followers',
-//     posts: 250 + ' posts',  
-//     picture: '../../../public/Test profile image.png'
+const user = {
+    name: 'John',
+    lastname: 'Doe',
+    // follows: 500 + ' following',
+    // followers: 1000 + ' followers',
+    // posts: 250 + ' posts',  
+    picture: '../../../public/Test profile image.png'
     
-// };
+};
 
 
-function NavBarPassword(){
+function NavbarCondiciones(){
     return (
         <>
             <nav>
@@ -19,7 +21,7 @@ function NavBarPassword(){
                     <ul id="nav-left">
                         <ul id='nav-search'>
                             <li><Link to={"/Feed"}><img src="../../../public/nav-logo.png" alt="Navigation Bar Logo" id='nav-logo'/></Link></li>
-                            <h1 id='pnav-header'><strong>Cambio de Contraseña</strong></h1>
+                            <h1 id='pnav-header'><strong>Condiciones y Políticas</strong></h1>
                         </ul>
                     </ul>
 
@@ -30,10 +32,11 @@ function NavBarPassword(){
                             <li><Link to={"/Friends"}><img src="../../../public/friends-icon.png" alt="Friends Icon" /></Link></li>
                         </ul>
 
-                        <ul id='Pass-user-info'>
-                            <li><Link to={"/Settings"}><img src='../../../public/nav-setting-password.png' alt="configuration icon" /></Link></li>
+                        <ul id='user-info'>
+                            <li><h3>{user.name + ' '} {user.lastname}</h3></li>
+                            <li><Link to={"/Profile"}><img src={user.picture} alt="profile picture" id='nav-pfp' /></Link></li>
+                            <li><Link to={"/Settings"}><img src='../../../public/config icon.svg' alt="configuration icon" /></Link></li>
                         </ul>
-
                     </ul>    
                 </ul>
             </nav>
@@ -41,4 +44,4 @@ function NavBarPassword(){
     )
 }
 
-export default NavBarPassword
+export default NavbarCondiciones

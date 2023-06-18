@@ -44,7 +44,7 @@ function PasswordChange() {
 
                     <div id="footer">
                         <p>¿Necesitas ayuda?</p>
-                        <p>Por favor, contacta al <a href="#">Soporte Técnico de MindNet</a></p>
+                        <p>Por favor, contacta al <a href="#"><strong>Soporte Técnico de MindNet</strong></a></p>
                     </div>
 
                 </div>
