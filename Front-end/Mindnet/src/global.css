@@ -175,7 +175,7 @@ li {
 
 
 
-#nav-stats {
+#pass-nav-stats {
     display: flex;
     gap: 21px;
     align-items: center;
@@ -183,7 +183,7 @@ li {
     color: var(--secondary-text-color);
 }
 
-#nav-stats p {
+#pass-nav-stats p {
     font-size: 1rem;
     padding-bottom: 5px;
 }
@@ -280,3 +280,17 @@ li {
     color: grey;
 }
 
+#Pass-user-info {
+    margin-left: -7%;
+}
+
+#pnav-header {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.6%;
+    color: #929292;
+}
