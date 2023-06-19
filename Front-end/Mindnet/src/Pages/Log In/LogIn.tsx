@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom"
 import "../../global.css"
 import "./LogIn.css"
 import { useState } from "react"
-
+import axios from "axios";
 
 function LogIn() {
 
@@ -25,19 +25,35 @@ function LogIn() {
                 [name]:value
             })
 
-          }  
+          } 
+          
+          const verificarUser = async ()=>{
+            try {
+                const url ="http://localhost:9000/api/auth/login";
+                const body ={
+                    email:form.email,
+                    password:form.password
+                }
+                const response = await axios.post(url,body);
+                console.log(response);
+                navigate("/feed");
+
+            } catch(error)
+            {
+                console.error(error);
+                navigate("/login");
+
+            }
+
+
+          }
         
         const formPre = (event:any) =>{
             event.preventDefault(),
             console.log(form);
-            if(form.email==="gustavo.deoleor@gmail.com" && form.password==="qwerty28"){
-
-                navigate("/feed")
-            }
-            else {
+                verificarUser()
                 
-                console.log("usuario o contraseña incorrecta");
-            }
+           
         }  
         
 
