@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "../../global.css"
 import "./ForgotPassword.css"
 
@@ -31,7 +32,14 @@ function ForgotPassword() {
                       />
             </div>
             
+            <div id="btn-container">
                 <button type="submit" className="primary-button">Enviar</button>
+            </div>
+            
+            <div id="btn-container1">
+                <Link to={"/LogIn"}><button type="button" className="secondary-button">Volver a iniciar sesión</button></Link>
+            </div>
+
 
             <div className="footer">
                 <p>¿Necesitas ayuda?</p>
