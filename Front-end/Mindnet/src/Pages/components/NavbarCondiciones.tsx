@@ -5,15 +5,15 @@ import { Link } from "react-router-dom"
 const user = {
     name: 'John',
     lastname: 'Doe',
-    follows: 500 + ' following',
-    followers: 1000 + ' followers',
-    posts: 250 + ' posts',  
+    // follows: 500 + ' following',
+    // followers: 1000 + ' followers',
+    // posts: 250 + ' posts',  
     picture: '../../../public/Test profile image.png'
     
-  };
+};
 
 
-function NavBar(){
+function NavbarCondiciones(){
     return (
         <>
             <nav>
@@ -21,13 +21,7 @@ function NavBar(){
                     <ul id="nav-left">
                         <ul id='nav-search'>
                             <li><Link to={"/Feed"}><img src="../../../public/nav-logo.png" alt="Navigation Bar Logo" id='nav-logo'/></Link></li>
-                            <li><input type="text" name="searchbar" id="searchbar" placeholder='Buscar devs...' /></li>
-                        </ul>
-                        
-                        <ul id='nav-stats'>
-                            <li><p>{user.follows}</p></li>
-                            <li><p>{user.followers}</p></li>
-                            <li><p>{user.posts}</p></li>
+                            <h1 id='pnav-header'><strong>Condiciones y Políticas</strong></h1>
                         </ul>
                     </ul>
 
@@ -50,4 +44,4 @@ function NavBar(){
     )
 }
 
-export default NavBar
+export default NavbarCondiciones
