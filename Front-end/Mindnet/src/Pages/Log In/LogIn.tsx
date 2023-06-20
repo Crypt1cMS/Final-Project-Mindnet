@@ -9,6 +9,7 @@ function LogIn() {
             
     
         
+        const navigate = useNavigate()    
     
         const [form,setForm] = useState({
                 email:"",
@@ -16,7 +17,6 @@ function LogIn() {
             });
 
 
-        const navigate = useNavigate()    
         const formChange= (event: any)=>{
             const {name, value} = event.target;
             
@@ -35,7 +35,7 @@ function LogIn() {
                     password:form.password
                 }
                 const response = await axios.post(url,body);
-                console.log(response);
+                console.log(response.data);
                 navigate("/feed");
 
             } catch(error)
