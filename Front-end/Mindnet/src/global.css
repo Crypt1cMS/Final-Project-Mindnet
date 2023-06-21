@@ -356,6 +356,13 @@ button.comment-button {
     width: 20%;
 }
 
+.sidebar-condicion {
+    display: flex;
+    height: 156vh;
+    overflow: hidden;
+    width: 20%;
+}
+
 .sidebar-menu {
     display: flex;
     flex-direction: column;
