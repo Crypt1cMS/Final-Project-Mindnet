@@ -1,16 +1,21 @@
 import { Link, useNavigate } from "react-router-dom"
+import { useContext, useState } from "react"
+import axios from "axios";
 import "../../global.css"
 import "./LogIn.css"
-import { useState } from "react"
-import axios from "axios";
+import {AuthContext} from "../../auth"
+
 
 function LogIn() {
 
             
     
-        
+        const {login} = useContext(AuthContext)    
         const navigate = useNavigate()    
-    
+
+
+            
+
         const [form,setForm] = useState({
                 email:"",
                 password:""
@@ -35,7 +40,8 @@ function LogIn() {
                     password:form.password
                 }
                 const response = await axios.post(url,body);
-                console.log(response.data);
+                console.log(response.data.token, response.data.id);
+                 login(response.data.token, response.data.id)
                 navigate("/feed");
 
             } catch(error)

@@ -226,6 +226,14 @@ li {
     cursor: pointer;
 }
 
+.nav-button{
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    background-color: #F6F6F6;
+
+
+}
 .sidebar {
     display: flex;
     height: 100vh;
