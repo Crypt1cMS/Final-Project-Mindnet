@@ -347,6 +347,7 @@ button.comment-button {
     max-height: 100px;
     max-width: 540px;
     overflow-wrap: anywhere;
+}
 
 .sidebar {
     display: flex;
