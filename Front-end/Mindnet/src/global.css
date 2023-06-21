@@ -226,6 +226,128 @@ li {
     cursor: pointer;
 }
 
+
+#posts-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.social-media-post-card {
+
+    background-color: #575757;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    margin-top: 300px;
+    margin-bottom: 16px;
+
+    width: 740px;
+    min-height: 780px;
+
+
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 16px;
+    border-radius: 12px;
+}
+
+.post-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-buttons button {
+    width: 211px;
+    height: 35px;
+    background-color: #FFFFFF;
+    border: none;
+    color: var(--secondary-text-color);
+    border-radius: 100px;
+    
+}
+
+.comment-section {
+  margin-top: 16px;
+}
+
+input.comment-input {
+  width: 90%;
+  padding: 8px;
+  border: 1px solid #cccccc;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  margin-right: 8px;
+}
+
+.comment-button {
+    border: none;   
+}
+
+button.comment-button {
+    background: none;
+    border: none;
+}
+
+.comment-button img {
+    width: 45px;
+    border-radius: 100px;
+    
+
+    position: relative;
+    top: 20.5px;
+  
+}
+
+.comment-button img:hover {
+    opacity: 90%;
+    transform: scale(1.1);
+    transition: ease-in;
+    transition-duration: 100ms;
+  
+}
+
+.post-comments {
+    margin: 10px 0px;
+    padding: 20px 20px;
+
+    background-color: #FFFFFF;
+    border-radius: 25px;
+}
+.post-comments p {
+    margin-bottom: 8px;
+}
+
+.post-comment {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.comment-profile-picture {
+    height: 50px;
+    width: 50px;
+}
+
+.comment-text {
+    display: flex;
+    flex-direction: column;
+    
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.comment-text p {
+    font-size: 0.75rem;
+    max-height: 100px;
+    max-width: 540px;
+    overflow-wrap: anywhere;
+
 .sidebar {
     display: flex;
     height: 100vh;
