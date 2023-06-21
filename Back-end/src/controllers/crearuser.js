@@ -25,9 +25,9 @@ const crearUsuario = async (req,res )=>{
     
    //guardar en bd
      await usuario.save();
-    res.json({
-        usuario
-    });
+    res.send(
+    "el:usuario fue creado con exito" 
+    );
   
 }
 

@@ -227,6 +227,16 @@ li {
 }
 
 
+.nav-button{
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    background-color: #F6F6F6;
+
+
+}
+
+
 #posts-wrapper {
     display: flex;
     align-items: center;
@@ -348,6 +358,7 @@ button.comment-button {
     max-width: 540px;
     overflow-wrap: anywhere;
 }
+
 
 .sidebar {
     display: flex;

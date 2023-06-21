@@ -1,10 +1,28 @@
 import { Link, useNavigate } from "react-router-dom"
+import { useContext, useState } from "react"
+import axios from "axios";
 import "../../global.css"
 import "./LogIn.css"
+
+import {AuthContext} from "../../auth"
+
+
 import { useState } from "react"
 
 
+
+
+            
+    
+        const {login} = useContext(AuthContext)    
+        const navigate = useNavigate()    
+
+
+            
+
+
 function LogIn() {
+
         const [form,setForm] = useState({
                 email:"",
                 password:""
@@ -19,7 +37,34 @@ function LogIn() {
                 ...form,
                 [name]:value
             })
+
+
+          } 
+          
+          const verificarUser = async ()=>{
+            try {
+                const url ="http://localhost:9000/api/auth/login";
+                const body ={
+                    email:form.email,
+                    password:form.password
+                }
+                const response = await axios.post(url,body);
+                console.log(response.data.token, response.data.id);
+                 login(response.data.token, response.data.id)
+                navigate("/feed");
+
+            } catch(error)
+            {
+                console.error(error);
+                navigate("/login");
+
+            }
+
+
+          }
+
           }  
+
         
         const formPre = (event:any) =>{
             event.preventDefault(),
