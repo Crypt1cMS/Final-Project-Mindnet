@@ -16,6 +16,10 @@ function TerminosCondiciones () {
             <div id='content'>
               <p>Bienvenido@s a nuestra plataforma de social media. Antes de utilizar nuestros servicios, te pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder o utilizar nuestra plataforma, aceptas cumplir con estos términos y condiciones, así como con todas las leyes y regulaciones aplicables. Si no estás de acuerdo con estos términos, te solicitamos que no utilices nuestra plataforma.</p>
             </div>
+
+            <div id='content1'>
+              <p>Bienvenido@s a nuestra plataforma de social media. Antes de utilizar nuestros servicios, te pedimos que leas detenidamente los siguientes términos y condiciones. Al acceder o utilizar nuestra plataforma, aceptas cumplir con estos términos y condiciones, así como con todas las leyes y regulaciones aplicables. Si no estás de acuerdo con estos términos, te solicitamos que no utilices nuestra plataforma.</p>
+            </div>
           </div>
               
     </main>

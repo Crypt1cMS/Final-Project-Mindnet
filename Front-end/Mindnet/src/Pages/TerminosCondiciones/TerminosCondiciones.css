@@ -44,3 +44,17 @@ main {
     margin-left: 6%;
     margin-top: -13%;
 }
+
+#content1 p {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #575757;
+    width: 90%;
+    align-content: center;
+    margin-left: 6%;
+    margin-top: -7%;
+}
