@@ -5,11 +5,6 @@ import { useState } from "react"
 
 
 function LogIn() {
-
-            
-    
-        
-    
         const [form,setForm] = useState({
                 email:"",
                 password:""
