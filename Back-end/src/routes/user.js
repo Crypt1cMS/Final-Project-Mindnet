@@ -13,7 +13,7 @@ router.post('/users',check('email','esto no es un correo valido').isEmail()
 
 //obtener todos los usuario
 router.get('/users',(req,res)=>{
-    usuarioSchema
+    Usuario
     .find()
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))
@@ -23,8 +23,9 @@ router.get('/users',(req,res)=>{
 //obtener un usuario especifco
 router.get('/users/:email',(req, res)=>{
     const {email} =req.params;
-    usuarioSchema
-    .findOne(email)
+    // res.json(name);
+    Usuario
+    .findOne({email})
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))
 
@@ -34,7 +35,7 @@ router.get('/users/:email',(req, res)=>{
 router.put('/users/:id',(req, res)=>{
     const {id } =req.params;
     const{name,lastname , email, password, birthday} = req.body;
-    usuarioSchema
+    Usuario
     .updateOne({ _id: id }, { $set:{ name,lastname , email, password, birthday } })
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))
@@ -44,7 +45,7 @@ router.put('/users/:id',(req, res)=>{
 //eliminar un usuario
 router.delete('/users/:id',(req, res)=>{
     const {id } =req.params;
-    usuarioSchema
+    Usuario
     .findOneAndRemove({ _id: id })
     .then((data)=>res.json(data))
     .catch((error)=>res.json({message:error}))

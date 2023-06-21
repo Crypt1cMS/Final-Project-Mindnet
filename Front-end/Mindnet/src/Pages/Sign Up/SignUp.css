@@ -46,11 +46,17 @@ main {
 }
 
 .form-group {
-    display: flex;
-    gap: 40px;
+    width: 100%;
 
 }
 
+.form-date__label{
+
+    color: #7b867e;
+    font-style: italic;
+    font-size: 12px;
+    padding-bottom: 8px;
+}
 .email-group {
     display: flex;
     flex-direction: column;
@@ -63,15 +69,21 @@ main {
 }
 
 .date-group {
+    padding: 16px;
     display: flex;
-    gap: 11px;
-    max-width: 500px;
+    flex-direction: column;
+    width: 100%;
+    /* max-width: 500px; */
 }
 
-.date-group input[type="number"]  {
-    flex: 1;
-    width: 150px;
-
+.date-group input[type="date"]  {
+        height: 50px;
+        width: 100%;
+        background: #EEF2EF;
+        border-radius: 100px;
+        padding: 15px;
+        font-style: italic;
+    
 }
 
 
