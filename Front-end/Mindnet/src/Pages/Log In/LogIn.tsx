@@ -3,14 +3,10 @@ import { useContext, useState } from "react"
 import axios from "axios";
 import "../../global.css"
 import "./LogIn.css"
-
 import {AuthContext} from "../../auth"
 
 
-import { useState } from "react"
-
-
-
+function LogIn() {
 
             
     
@@ -20,16 +16,12 @@ import { useState } from "react"
 
             
 
-
-function LogIn() {
-
         const [form,setForm] = useState({
                 email:"",
                 password:""
             });
 
 
-        const navigate = useNavigate()    
         const formChange= (event: any)=>{
             const {name, value} = event.target;
             
@@ -37,7 +29,6 @@ function LogIn() {
                 ...form,
                 [name]:value
             })
-
 
           } 
           
@@ -62,21 +53,13 @@ function LogIn() {
 
 
           }
-
-          }  
-
         
         const formPre = (event:any) =>{
             event.preventDefault(),
             console.log(form);
-            if(form.email==="gustavo.deoleor@gmail.com" && form.password==="qwerty28"){
-
-                navigate("/feed")
-            }
-            else {
+                verificarUser()
                 
-                console.log("usuario o contraseña incorrecta");
-            }
+           
         }  
         
 
@@ -129,4 +112,4 @@ function LogIn() {
     )
 }
 
-export default LogIn;
+export default LogIn

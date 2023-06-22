@@ -15,7 +15,7 @@ const login = async(req, res = response)=>{
                 mensaje:"el correo es incorrecto"
             })
         }
-
+        
     //validar contraseña
         const validPassword = bcrypt.compareSync(password, usuario.password);
         if(!validPassword){
@@ -23,13 +23,14 @@ const login = async(req, res = response)=>{
                 mensaje:"la contraseña es incorrecta"
             })
         } 
-
+        const id = usuario.id;
         //generar web tocken
         const token = await generarJwt(usuario.id);
         res.json({
             message:'todo bien',
             usuario,
-            token
+            token, 
+            id
         })
 }
 

@@ -2,10 +2,14 @@ import '../../global.css'
 // import Sidebar from '../components/Sidebar'
 // import NavBar from '../components/navbar'
 import './FeedStyle.css'
+import NavBar from '../components/navbar'
 
 export const Feed = () => {
   return (
-    <h1>FeedPage</h1>
+    <>
+      <NavBar/>
+      <h1>FeedPage</h1>
+    </>
   )
 }
 
