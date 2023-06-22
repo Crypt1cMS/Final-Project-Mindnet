@@ -1,7 +1,5 @@
-import { useContext } from 'react';
 import '../../global.css'
-import { Link, useNavigate } from "react-router-dom"
-import {AuthContext} from "../../auth"
+import { Link } from "react-router-dom"
 
 // placeholder object for testing
 const user = {
@@ -16,18 +14,6 @@ const user = {
 
 
 function NavBar(){
-   
-    const navigate =  useNavigate();    
-    const {logout} = useContext(AuthContext);
-
-        const onlogout = ()=>{
-            logout(),
-            navigate("/login")
-            
-
-        }
-   
-   
     return (
         <>
             <nav>
@@ -56,9 +42,7 @@ function NavBar(){
                             <li><h3>{user.name + ' '} {user.lastname}</h3></li>
                             <li><Link to={"/Profile"}><img src={user.picture} alt="profile picture" id='nav-pfp' /></Link></li>
                             <li><Link to={"/Settings"}><img src='../../../public/config icon.svg' alt="configuration icon" /></Link></li>
-                            <li><button className='nav-button' onClick={onlogout} >Logout</button> </li>
                         </ul>
-                        
                     </ul>    
                 </ul>
             </nav>
