@@ -282,16 +282,20 @@ li {
 }
 
 .comment-section {
-  margin-top: 16px;
+    margin-top: 16px;
+    width: 570px;
+    overflow: auto;
+
 }
 
 input.comment-input {
-  width: 90%;
-  padding: 8px;
-  border: 1px solid #cccccc;
-  background-color: #FFFFFF;
-  border-radius: 100px;
-  margin-right: 8px;
+    height: 49px;
+    width: 443px;
+    padding: 8px;
+    border: 1px solid #cccccc;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    margin-right: 8px;
 }
 
 .comment-button {
@@ -319,6 +323,38 @@ button.comment-button {
     transition: ease-in;
     transition-duration: 100ms;
   
+}
+
+.post-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.63px;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.poster-profile-picture{
+    margin-right: 10px;
+}
+
+.post-info h4 {
+    color: #FFF;
+    
+    font-weight: 600;
+    line-height: 1.25rem;
+}
+
+.post-info p {
+    color: #D1D1D1;
+    text-align: justify;
+    font-weight: 400;
+    line-height: 1.25rem;
+    
+}
+
+.poster-info {
+    display: flex;
 }
 
 .post-comments {
@@ -510,12 +546,7 @@ button.comment-button {
   margin-bottom: 10px;
 }
 
-.modal-comments {
-  
-  
-}
-
-.comment-section {
+.modal-sidebar {
     width: 30%;
     height: 100%;
     background-color: #575757;
@@ -526,7 +557,29 @@ button.comment-button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.modal-buttons {
+    align-self: center;
+    margin-top: 40px;
+    display: flex;
+    gap: 60px;
+}
+
+.modal-buttons button {
+    background: none;
+    color: #929292;
+    font-weight: 600;
+    cursor: pointer;
+
+}
+
+
+.comment-input {
+    height: 49px;
+    width: 443px;
 }
 
 .modal-comment {
