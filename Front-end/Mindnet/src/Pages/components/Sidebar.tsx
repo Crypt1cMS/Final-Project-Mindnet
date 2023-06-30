@@ -5,6 +5,7 @@ import Gustavo from '../../../public/side-gustavo.jpg'
 import Andres from '../../../public/side-andres.jpg'
 
 
+
 function Sidebar() {
   return (
 
@@ -59,6 +60,7 @@ function Sidebar() {
 
     </div>
   </>
+
   );
 }
 

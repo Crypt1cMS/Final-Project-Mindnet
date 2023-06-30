@@ -4,7 +4,7 @@ function SidebarCondiciones() {
   return (
 
   <>
-    <div className="sidebar">
+    <div className="sidebar-condicion">
       
       <div className="sidebar-menu-condicion">
 
