@@ -10,6 +10,7 @@ const Feed: React.FC = () => {
     { id: 1, text: 'Great post!', user: { name: 'John Doe', profilePicture: '../../../public/Test profile image.png' } },
     { id: 2, text: 'Nice photo!', user: { name: 'Jane Smith', profilePicture: 'jane.jpg' } },
   ];
+  const poster = {id: 1, name: 'John', profilePicture: '../../../public/Test profile image.png' }
   const postShares = 5;
     
       return (
@@ -19,6 +20,7 @@ const Feed: React.FC = () => {
             likes={postLikes}
             comments={postComments}
             shares={postShares}
+            poster={poster}
           />
         </div>
       );
