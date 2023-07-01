@@ -89,7 +89,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
   };
 
   return (
-    <div id="posts-wrapper">
+    <div id="post-wrapper">
       <div className="social-media-post-card">
         <img
           className="post-image"
@@ -127,7 +127,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
         contentLabel="Image Modal"
         style={modalStyles} // Apply custom styles to the modal
       >
-        <img src={selectedImage} alt="Modal" />
+        <img src={selectedImage} alt="Modal" className='modal-image' />
         <div className="modal-sidebar">
           <div className="post-info">
             <div className="poster-info">
