@@ -97,7 +97,7 @@ function LogIn() {
   
                   <div className="button-group">
                       <button type="submit" className="primary-button" >Iniciar Sesión</button>
-                      <Link to={`/ForgotPassword`}><p className="secondary-link">¿Olvidaste tu contraseña?</p></Link>
+                      <Link to={'/ForgotPassword'}><p className="secondary-link">¿Olvidaste tu contraseña?</p></Link>
                       <hr className="form-divider" />
                       
 

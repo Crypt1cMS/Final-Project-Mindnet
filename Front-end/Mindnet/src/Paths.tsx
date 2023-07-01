@@ -16,6 +16,7 @@ function Rutas () {
         <Routes>
             <Route path = '/login' element={<LogIn/>} />
             <Route path ='/signup' element={<SignUp />} />
+            <Route path = '/ForgotPassword' element={<ForgotPassword/>} />
            
             <Route path = '/*' element={
                 <PrivateRoute>
@@ -23,7 +24,6 @@ function Rutas () {
 
                     <Route path = '/*' element={<Navigate to="/feed"/>} />
                     <Route path = '/ConfirmationPage' element={<ConfirmationPage/>} />
-                    <Route path = '/ForgotPassword' element={<ForgotPassword/>} />
                     <Route path = '/MessageForgotpassword' element={<MessageForgotpass/>} />
                     <Route path = '/Newpassword' element={<NewPassword/>} />
                     <Route path = '/Feed' element={<Feed/>} /> 

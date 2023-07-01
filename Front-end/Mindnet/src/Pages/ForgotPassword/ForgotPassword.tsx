@@ -10,7 +10,7 @@ function ForgotPassword() {
             <img src="../public/Forgotpassword.png" alt="A stressed person" id="img-forgotpassword"/>
         </div>
 
-        <div className="container">
+        <div className="container-forgotpass">
             <h1 id="logo">Mind<span id="logo-highlight">Net</span></h1>
 
             <h2>¿Olvidaste tu contraseña?</h2>
