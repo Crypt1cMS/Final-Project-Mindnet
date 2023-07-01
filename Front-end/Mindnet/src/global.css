@@ -250,7 +250,7 @@ li {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 16px;
-    margin-top: 300px;
+    margin-top: 40px;
     margin-bottom: 16px;
 
     width: 740px;
@@ -323,6 +323,13 @@ button.comment-button {
     transition: ease-in;
     transition-duration: 100ms;
   
+}
+
+#create-post {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
 }
 
 .post-info {
@@ -540,8 +547,13 @@ button.comment-button {
   width: 400px;
 }
 
+.modal-image {
+    width: 720px;
+    max-height: 450px;
+}
+
 .modal img {
-  max-width: 50px;
+  max-width: 720px;
   height: auto;
   margin-bottom: 10px;
 }
