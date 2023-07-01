@@ -127,7 +127,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
         contentLabel="Image Modal"
         style={modalStyles} // Apply custom styles to the modal
       >
-        <img src={selectedImage} alt="Modal" className='modal-image' />
+        <img src={selectedImage} alt="Modal" className='m' />
         <div className="modal-sidebar">
           <div className="post-info">
             <div className="poster-info">
