@@ -1,6 +1,6 @@
 import "./Password-Change.css"
 import '../../global.css'
-import NavBarPassword from '../components/navbarPassword'
+import NavBarPassword from '../New-Password/navbarPassword'
 
 function PasswordChange() {
     return(

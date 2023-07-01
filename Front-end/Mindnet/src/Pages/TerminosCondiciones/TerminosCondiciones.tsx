@@ -1,7 +1,7 @@
 import './TerminosCondiciones.css'
 import '../../global.css'
-import NavbarCondiciones from '../components/NavbarCondiciones'
-import SidebarCondiciones from '../components/SidebarCondiciones'
+import NavbarCondiciones from './NavbarCondiciones'
+import SidebarCondiciones from './SidebarCondiciones'
 
 function TerminosCondiciones () {
   return (

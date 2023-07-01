@@ -45,7 +45,6 @@ const onlogout = ()=>{
                         <ul id='nav-icons'>
                             <li><Link to={"/Feed"}><img src="../../../public/Feed-Icon.png" alt="Feed Icon" /></Link></li>
                             <li><Link to={"/Inbox"}><img src="../../../public/direct-messages-icon.png" alt="Direct Message Icon"/></Link></li>
-                            <li><Link to={"/Friends"}><img src="../../../public/friends-icon.png" alt="Friends Icon" /></Link></li>
                         </ul>
 
                         <ul id='user-info'>
