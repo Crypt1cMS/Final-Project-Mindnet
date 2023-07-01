@@ -3,7 +3,9 @@ const mongoose = require('mongoose');
 const app =  express();
 const cors= require('cors');
 const rutaUsuario = require("./routes/user");
-const rutaAuth =require('./routes/auth')
+const rutaAuth =require('./routes/auth');
+const rutaPost = require('./routes/posts');
+
 
 //JSON.stringify()
 const port =(9000);
@@ -23,6 +25,7 @@ app.use(express.json())
 app.use(cors());
 app.use('/api', rutaUsuario);
 app.use('/api/auth',rutaAuth);
+app.use('/api/post',rutaPost);
 
 
 //mongoose connection

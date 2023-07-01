@@ -22,7 +22,16 @@ const usuarioSchema = mongoose.Schema({
     birthday:{
         type:Date,
         required: true
+    },
+    followings:{
+        type:Array,
+        default: []
+    },
+    followers:{
+        type:Array,
+        default: []
     }
+
 });
 
 module.exports = mongoose.model('Usuario', usuarioSchema);
