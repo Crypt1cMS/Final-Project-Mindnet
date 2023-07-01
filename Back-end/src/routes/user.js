@@ -7,7 +7,7 @@ const { crearUsuario } = require('../controllers/crearuser');
 const router  = express.Router();
 
 //crear usuario
-router.post('/users',check('email','esto no es un correo valido').isEmail()
+router.post('/users', check('email','esto no es un correo valido').isEmail()
 , validarCampos, crearUsuario
 );
 

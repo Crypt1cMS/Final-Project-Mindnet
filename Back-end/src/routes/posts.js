@@ -1,100 +1,60 @@
+// backend route
 const express = require('express');
-const Post = require('../models/post');
-const Usuario = require('../models/usuario');
-
 const router = express.Router();
+const { body, validationResult } = require('express-validator');
+const multer = require('multer');
+const path = require('path');
+const Posts = require('../models/publicaciones');
 
+// Multer configuration
+const storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/'); // Set the destination folder for uploaded files
+  },
+  filename: function (req, file, cb) {
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9); // Generate a unique filename
+    const extension = path.extname(file.originalname); // Get the file extension
+    cb(null, uniqueSuffix + extension); // Set the filename as uniqueSuffix.extension
+  },
+});
 
-//create a post
-router.post("/", async (req, res)=>{
+const fileFilter = (req, file, cb) => {
+  // Validate the file type
+  if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+    cb(null, true);
+  } else {
+    cb(new Error('Only JPEG and PNG images are allowed.'));
+  }
+};
 
-    const newpost = Post(req.body);
+const upload = multer({ storage, fileFilter });
 
+// Create a post
+router.post(
+  '/publicar',
+  [
+    upload.single('picture'), // Handle the picture file upload
+    body('caption').notEmpty().withMessage('Caption is required.'), // Validate the caption field
+  ],
+  async (req, res) => {
     try {
-        
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
 
-        const savepost = await newpost.save();
-        res.status(200).json(`"nuevo post creado" ${savepost.userid}`);
+      const { caption } = req.body;
+      const picture = req.file.path; // Get the uploaded file path
 
+      const post = new Posts({ caption, picture });
+      await post.save();
 
-    } catch (err) {
-        res.status(500).json(err);
+      res.status(200).json({ message: 'Post created successfully', post });
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: 'Internal server error' });
     }
+  }
+);
 
-
-})
-//delete a post
-router.delete("/:id", async (req, res) =>{
-
-        try {
-                const delpost = await Post.findById(req.params.id);
-
-                if(delpost.userid === req.body.userid )
-                {
-                    await delpost.deleteOne();
-                    res.status(200).json("post deleted succesfully")
-                }
-                else{
-                    res.status(403).json("you can only delete your own post")
-                }
-            
-        } catch (err) {
-            res.status(500).json(err);
-        }
-
-})
-
-//like a post
-router.put("/:id/like", async(req, res)=>{
-
-    try {
-            const post = await Post.findById(req.params.id);
-
-            if(!post.likes.includes(req.body.userid)){
-                await post.updateOne({$push: {likes: req.body.userid}})
-                res.status(200).json("the post has been liked")
-            }
-            else{
-                await post.updateOne({$pull: {likes: req.body.userid}})
-                res.status(200).json("the post has been disliked")
-            }
-
-    } catch (err) {
-        res.status(500).json(err);
-    }
-
-
-
-})
-//get a post
-router.get("/:id", async(req, res)=>{
-    try {
-        
-    const post = await Post.findById(req.params.id);
-    res.status(200).json(post);
-    
-    
-    } catch (err) {
-
-        res.status(500).json(err);
-    }
-})
-//get all post timeline
-router.get("/timeline/all", async(req, res)=>{
-    try {
-
-        const currentUser = await Usuario.findById(req.body.userid);
-        const userPost = await Post.find( {userid: currentUser._id});
-        const friendPost = await Promise.all(
-            currentUser.followings.map((friendid) =>{
-                return Post.find({ userid: friendid});
-            })
-        );
-        res.json(userPost.concat(...friendPost))
-    } catch (err) {
-        res.status(500).json(err);
-    }
-
-
-})
 module.exports = router;
