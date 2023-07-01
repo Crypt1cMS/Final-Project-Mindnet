@@ -1,4 +1,5 @@
 import "./Newpassword.css"
+import { Link } from "react-router-dom"
 
 function Newpassword() {
     return(
@@ -25,7 +26,9 @@ function Newpassword() {
                         required
                     />
                 
-                <button type="submit" id="btn-main">Guardar cambios</button>
+                <button type="submit" id="btn-main">Guardar Cambios</button>
+
+                <Link to={"/Profile"}><button type="button" className="secondary-button-newpass">Volver a tu Perfil</button></Link>
 
             </div>
         </main>

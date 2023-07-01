@@ -38,7 +38,7 @@ const role = "Developer"
                 <hr id="profile-divider"></hr>
 
             <div className="footer-profile">
-                <Link to={'/PasswordChange'}>Cambiar Contraseña</Link>
+                <Link to={'/Newpassword'}>Cambiar Contraseña</Link>
                 <button className="primary-button-profile" type="submit">Guardar Cambios</button>
             </div>
         </div>
