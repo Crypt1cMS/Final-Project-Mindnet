@@ -5,6 +5,7 @@ import './FeedStyle.css';
 import CreatePost from '../components/createpost';
 import SocialMediaPost from '../components/post';
 import Sidebar from '../components/Sidebar';
+import NavBar from '../components/navbar';
 
 interface Comment {
   id: number;
@@ -52,6 +53,7 @@ const Feed: React.FC = () => {
   return (
     <div id="feed">
       <Sidebar />
+      <NavBar/>
       <div className="feed-container">
         <CreatePost onSubmit={handlePostSubmit} /> {/* Pass the handlePostSubmit function as a prop */}
         {/* Render existing posts */}

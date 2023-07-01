@@ -226,17 +226,6 @@ li {
     cursor: pointer;
 }
 
-
-.nav-button{
-    font-weight: bold;
-    font-size: 24px;
-    color: black;
-    background-color: #F6F6F6;
-
-
-}
-
-
 #posts-wrapper {
     display: flex;
     align-items: center;
@@ -626,4 +615,78 @@ div.ReactModalPortal > div > div    > img {
     position: absolute;
     top: 30%;
     left: 20%;
+}
+
+.nav-button {
+    margin: 5%;
+    background: none;
+}
+
+.nav-button:hover {
+    background-color: #F6F6F6;
+    color: var(--main-accent-color);
+}
+
+#dropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 5.5rem;
+    left: 99.9rem;
+    width: 100px;
+    padding: 15px;
+    padding-right: 15px;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+hr {
+    height: 1px;
+    background-color: #cfcfcf;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+
+#dropdown::before {
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    right: 0.5rem;
+    width: 30px;
+    height: 25px;
+    background-color: #F6F6F6;
+    transform: rotate(45deg);
+    border-top: 1px solid;
+    border-left: 1px solid gray;
+}
+
+#dropdown-condition {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 6rem;
+    left: 99rem;
+    width: 100px;
+    padding: 15px;
+    padding-right: 15px;
+    background-color: #F6F6F6;
+    border-radius: 15px;
+    border: 1px solid;
+}
+
+#dropdown-condition::before {
+    content: '';
+    position: absolute;
+    top: -0.7rem;
+    right: 0.5rem;
+    width: 30px;
+    height: 25px;
+    background-color: #F6F6F6;
+    transform: rotate(45deg);
+    border-top: 1px solid;
+    border-left: 1px solid gray;
 }

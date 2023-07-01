@@ -1,19 +1,35 @@
 import '../../global.css'
-import { Link } from "react-router-dom"
+import { useContext } from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom"
+import {AuthContext} from "../../auth"
 
 // placeholder object for testing
 const user = {
     name: 'John',
     lastname: 'Doe',
-    // follows: 500 + ' following',
-    // followers: 1000 + ' followers',
-    // posts: 250 + ' posts',  
     picture: '../../../public/Test profile image.png'
     
 };
 
 
 function NavbarCondiciones(){
+
+const [dropdownVisible, setDropdownVisible] = useState(false);
+
+const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
+
+const navigate =  useNavigate();
+
+const {logout}:any = useContext(AuthContext);
+
+const onlogout = ()=>{
+    logout(),
+    navigate("/login")
+}        
+
     return (
         <>
             <nav>
@@ -35,8 +51,25 @@ function NavbarCondiciones(){
                         <ul id='user-info'>
                             <li><h3>{user.name + ' '} {user.lastname}</h3></li>
                             <li><Link to={"/Profile"}><img src={user.picture} alt="profile picture" id='nav-pfp' /></Link></li>
-                            <li><Link to={"/Settings"}><img src='../../../public/config icon.svg' alt="configuration icon" /></Link></li>
+                            <li><img src='../../../public/config icon.svg' alt="configuration icon" onClick={toggleDropdown} />
+                           
+                           
+                            {dropdownVisible && (
+                                <div id="dropdown-condition">
+                                    <div className="dropdown-cotent">
+                                        <ul>
+                                            <li><button className='nav-button' onClick={onlogout} >Logout</button></li>
+                                            <hr></hr>
+                                            <li><Link to={"/Feed"}><button className='nav-button'>Back to Feed</button></Link></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            )}
+                           
+                           
+                            </li>
                         </ul>
+                        
                     </ul>    
                 </ul>
             </nav>
