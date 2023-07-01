@@ -7,6 +7,8 @@ import MessageForgotpass from './Pages/ForgotPassword/ForgotPassword.tsx'
 import NewPassword from './Pages/New-Password/Newpassword.tsx'
 import { PrivateRoute } from './routes/PrivateRoute.jsx'
 import Feed from './Pages/Feed/FeedPage.tsx'
+import TerminosCondiciones from './Pages/TerminosCondiciones/TerminosCondiciones.tsx'
+
 function Rutas () {
     return (
         
@@ -23,7 +25,8 @@ function Rutas () {
                     <Route path = '/ForgotPassword' element={<ForgotPassword/>} />
                     <Route path = '/MessageForgotpassword' element={<MessageForgotpass/>} />
                     <Route path = '/Newpassword' element={<NewPassword/>} />
-                    <Route path = '/Feed' element={<Feed/>} />  
+                    <Route path = '/Feed' element={<Feed/>} /> 
+                    <Route path = '/TerminosCondiciones' element={<TerminosCondiciones/>} />
 
                     </Routes>
                 </PrivateRoute>
