@@ -1,15 +1,16 @@
 import { useState } from 'react';
 import axios from 'axios';
 
+
 const CreatePost = () => {
   const [caption, setCaption] = useState('');
   const [picture, setPicture] = useState(null);
 
-  const handleCaptionChange = (e) => {
+  const handleCaptionChange = (e:any) => {
     setCaption(e.target.value);
   };
 
-  const handlePictureChange = (e) => {
+  const handlePictureChange = (e:any) => {
     const file = e.target.files[0]; // Get the first selected file
     if (file) {
       const extension = file.name.split('.').pop().toLowerCase();
@@ -30,6 +31,8 @@ const CreatePost = () => {
     axios
       .post(url, formData)
       .then((response) => {
+        const newPost = response.data;
+        onSubmit(newPost); // Call the onSubmit prop function with the new post data
         console.log('Payload:', response.data);
       })
       .catch((error) => {
