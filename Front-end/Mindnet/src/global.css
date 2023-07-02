@@ -701,4 +701,18 @@ hr {
     margin-top: 1rem;
     max-height: 300px;
     overflow-y: scroll;
+    position: absolute;
+    max-width: 400px;
+    top: 3.8rem;
+    left: 7rem;
+    text-align: center;
+}
+
+.search-result {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.search-result:hover {
+    background-color: #efefef;
 }
