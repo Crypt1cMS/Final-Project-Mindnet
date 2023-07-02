@@ -57,4 +57,13 @@ router.post(
   }
 );
 
+
+router.get('/publicaciones',(req,res)=>{
+  Posts
+  .find()
+  .then((data)=>res.json(data))
+  .catch((error)=>res.json({message:error}))
+
+});
+
 module.exports = router;
