@@ -11,8 +11,8 @@ interface Comment {
 }
 
 interface SocialMediaPostProps {
-  id: number;
-  image: string;
+  id: string;
+  picture: string;
   likes: number;
   comments: Comment[];
   shares: number;
@@ -25,7 +25,7 @@ interface SocialMediaPostProps {
 }
 
 const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
-  image,
+  picture,
   likes,
   comments,
   shares,
@@ -33,17 +33,17 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
   poster,
 }) => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState('');
+  const [selectedPicture, setSelectedPicture] = useState('');
   const [commentText, setCommentText] = useState('');
   const [postComments, setPostComments] = useState<Comment[]>(comments);
 
-  const openModal = (image: string) => {
-    setSelectedImage(image);
+  const openModal = (picture: string) => {
+    setSelectedPicture(picture);
     setModalOpen(true);
   };
 
   const closeModal = () => {
-    setSelectedImage('');
+    setSelectedPicture('');
     setModalOpen(false);
   };
 
@@ -93,9 +93,9 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
       <div className="social-media-post-card">
         <img
           className="post-image"
-          src={image}
+          src={picture}
           alt="Post"
-          onClick={() => openModal(image)}
+          onClick={() => openModal(picture)}
         />
 
         <div className="post-buttons">
@@ -113,7 +113,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
                 alt="Profile"
               />
               <div className="comment-text">
-                <h4 className="comment-username">{comment.user.name}</h4>{' '}
+                <h4 className="comment-username">{comment.user.name}</h4>
                 <p>{comment.text}</p>
               </div>
             </div>
@@ -124,10 +124,10 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
       <Modal
         isOpen={modalOpen}
         onRequestClose={closeModal}
-        contentLabel="Image Modal"
+        contentLabel="picture Modal"
         style={modalStyles} // Apply custom styles to the modal
       >
-        <img src={selectedImage} alt="Modal" className='m' />
+        <img src={selectedPicture} alt="Modal" className="m" />
         <div className="modal-sidebar">
           <div className="post-info">
             <div className="poster-info">
@@ -150,6 +150,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
               <button className="share-btn">{shares} Compartir</button>
             </div>
           </div>
+
           <div className="comment-section">
             <div className="modal-comments">
               {postComments.map((comment) => (
@@ -167,11 +168,9 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
               ))}
             </div>
 
-
-          </div>
-          <form className="comment-form" onSubmit={handleCommentSubmit}>
+            <form className="comment-form" onSubmit={handleCommentSubmit}>
               <input
-                className='comment-input'
+                className="comment-input"
                 type="text"
                 placeholder="Add a comment..."
                 value={commentText}
@@ -179,6 +178,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
               />
               <button type="submit">Post Comment</button>
             </form>
+          </div>
         </div>
       </Modal>
     </div>
