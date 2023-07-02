@@ -1,8 +1,10 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import React, { useState } from 'react';
 import '../../global.css'
-import { Link, useNavigate } from "react-router-dom"
+import { Link, json, useNavigate } from "react-router-dom"
 import {AuthContext} from "../../auth"
+import { Searchbar } from './Searchbar';
+import { SearchResultsList } from './SearchResultsList'
 
 // placeholder object for testing
 const user = {
@@ -13,27 +15,29 @@ const user = {
     posts: 250 + ' posts',  
     picture: '../../../public/Test profile image.png'
     
-  };
+};
 
 function NavBar() {
 
+// dropdown for the setting icon
 const [dropdownVisible, setDropdownVisible] = useState(false);
 
 const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
-  };
+};
 
-  const navigate =  useNavigate();    
-  const {logout}:any = useContext(AuthContext);
+// logout within the dropdown
+const navigate =  useNavigate();        
+const {logout}:any = useContext(AuthContext);
 
-      const onlogout = ()=>{
-          logout(),
-          navigate("/login")
-          
+const onlogout = ()=>{
+    logout(),
+    navigate("/login")
+}
 
-      }
-   
-   
+// search function in the navbar
+const [results, setResults] = useState([]);
+
     return (
         <>
             <nav>
@@ -41,9 +45,11 @@ const toggleDropdown = () => {
                     <ul id="nav-left">
                         <ul id='nav-search'>
                             <li><Link to={"/Feed"}><img src="../../../public/nav-logo.png" alt="Navigation Bar Logo" id='nav-logo'/></Link></li>
-                            <li><input type="text" name="searchbar" id="searchbar" placeholder='Buscar devs...' /></li>
+                            <li><Searchbar setResults={setResults}/></li>
                         </ul>
                         
+                        <SearchResultsList results={results}/>
+
                         <ul id='nav-stats'>
                             <li><p>{user.follows}</p></li>
                             <li><p>{user.followers}</p></li>

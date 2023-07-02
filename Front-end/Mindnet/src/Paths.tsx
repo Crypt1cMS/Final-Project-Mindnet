@@ -22,7 +22,7 @@ function Rutas () {
                 <PrivateRoute>
                     <Routes>
 
-                    <Route path = '/*' element={<Navigate to="/feed"/>} />
+                    <Route path = '/*' element={<Navigate to="/Feed"/>} />
                     <Route path = '/ConfirmationPage' element={<ConfirmationPage/>} />
                     <Route path = '/MessageForgotpassword' element={<MessageForgotpass/>} />
                     <Route path = '/Newpassword' element={<NewPassword/>} />
