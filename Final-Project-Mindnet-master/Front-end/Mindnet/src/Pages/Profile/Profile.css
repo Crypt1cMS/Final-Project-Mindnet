@@ -1,0 +1,127 @@
+html, body {
+    height: 0;
+}
+.container-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 20%;
+    padding-top: 7%;
+    background-color: #E0E0E0;
+    position: fixed;
+}
+  
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile h1 {
+    color: #575757;
+    text-align: center;
+    font-size: 36px;
+    font-family: Montserrat;
+    font-style: italic;
+    padding-bottom: 0;
+}
+
+.profile p {
+    color: #929292;
+    text-align: center;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: italic;
+    font-weight: 400;
+}
+  
+.profile img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 5%;
+}
+
+.content-profile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.content-profile input {
+    width: 85%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.content-profile p {
+    padding-bottom: 3%;
+    padding-top: 4%;
+    color: #929292;
+    font-size: 14px;
+    align-self: flex-start;
+    padding-left: 12%;
+}
+
+.additional-content-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.additional-content-profile input {
+    width: 85%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.additional-content-profile p {
+    padding-bottom: 3%;
+    padding-top: 4%;
+    color: #929292;
+    font-size: 14px;
+    align-self: flex-start;
+    padding-left: 12%;
+}
+
+.footer-profile {
+    display: flex;
+    flex-direction: column;
+    padding-top: 7%;
+}
+
+#profile-divider {
+    height: 1px;
+    border: 1px solid;
+    width: 220px;
+    position: relative;
+    margin-top: 10%;
+    color: #ababab;
+}
+
+.footer-profile a {
+    color: #30BA00;
+    font-weight: bold;
+    padding-bottom: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+.primary-button-profile {
+    background-color: #65CD81;
+    color: white;
+    border-radius: 100px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    width: 280px;
+    cursor: pointer;
+}

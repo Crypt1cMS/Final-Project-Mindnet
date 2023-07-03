@@ -1,0 +1,13 @@
+#feed {
+    display: flex;
+    gap: 400px;
+}
+
+.feed-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
