@@ -41,20 +41,19 @@ const CreatePost = () => {
   };
 
   return (
-    <div>
+    <div id='create-wrapper'>
       <h2>Create a Post</h2>
       <form>
         <div>
-          <label htmlFor="caption">Caption:</label>
           <input
             type="text"
             id="caption"
             value={caption}
             onChange={handleCaptionChange}
+            placeholder="¡Añadele un encabezado a tu publicación!"
           />
         </div>
         <div>
-          <label htmlFor="picture">Picture:</label>
           <input type="file" accept=".png, .jpg" id="picture" onChange={handlePictureChange} />
         </div>
         <button type="button" onClick={handleSubmit}>
