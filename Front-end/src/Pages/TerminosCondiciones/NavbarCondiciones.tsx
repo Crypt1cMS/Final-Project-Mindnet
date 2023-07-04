@@ -4,16 +4,22 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from "react-router-dom"
 import {AuthContext} from "../../auth"
 
-// placeholder object for testing
+
+
+function NavbarCondiciones(){
+
+// User info
+
+const {name, lastname}:any = useContext(AuthContext);
 const user = {
-    name: 'John',
-    lastname: 'Doe',
+    name: name,
+    lastname: lastname,
     picture: '../../../public/Test profile image.png'
     
 };
 
+// Drop down for the logout and back to feed 
 
-function NavbarCondiciones(){
 
 const [dropdownVisible, setDropdownVisible] = useState(false);
 
@@ -22,6 +28,8 @@ const toggleDropdown = () => {
   };
 
 const navigate =  useNavigate();
+
+// Logout 
 
 const {logout}:any = useContext(AuthContext);
 
