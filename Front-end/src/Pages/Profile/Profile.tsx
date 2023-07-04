@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom"
 import NavBar from "../components/navbar"
 import './Profile.css'
+import {AuthContext} from "../../auth"
+import { useContext } from 'react';
 
 function Profile() {
 
-const profileName = "John Doe"
+const {name, lastname}:any = useContext(AuthContext);
+const fullName = name + " " + lastname;
 const role = "Developer"
+
 
     return(
 
@@ -15,7 +19,7 @@ const role = "Developer"
 
             <div className="profile">
                 <img src="../../public/Test profile image.png" alt=""></img>
-                <h1>{profileName}</h1>
+                <h1>{fullName}</h1>
                 <p>{role}</p>
             </div>
 
