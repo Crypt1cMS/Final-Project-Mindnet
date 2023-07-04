@@ -396,6 +396,7 @@ button.comment-button {
     height: 100vh;
     overflow: hidden;
     width: 20%;
+    position: fixed;
     
 }
 
@@ -633,7 +634,7 @@ div.ReactModalPortal > div > div    > img {
     flex-direction: column;
     text-align: center;
     top: 5.5rem;
-    left: 95%;
+    left: 93.8%;
     width: 100px;
     padding: 15px;
     padding-right: 15px;
@@ -647,7 +648,6 @@ hr {
     background-color: #cfcfcf;
     margin-top: 5px;
     margin-bottom: 5px;
-    
 }
 
 #dropdown::before {
@@ -698,7 +698,7 @@ hr {
     flex-direction: column;
     box-shadow: 0px 0px 8px #ddd;
     border-radius: 10px;
-    margin-top: 1rem;
+    margin-top: 1%;
     max-height: 300px;
     overflow-y: scroll;
     position: absolute;
@@ -715,4 +715,49 @@ hr {
 
 .search-result:hover {
     background-color: #efefef;
+}
+
+#create-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #929292;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#create-wrapper > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #929292;
+    padding: 20px;
+    border-radius: 10px;
+    gap: 8px;
+}
+
+
+#picture {
+    margin-left: 100px;
+}
+
+#create-wrapper > form > button {
+    background-color: var(--main-primary-button);
+    color: var(--main-text-color);
+    border-radius: 100px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 200px;
+    height: 50px;
+}
+
+#create-wrapper > form > button:hover {
+    opacity: 90%;
+    transform: scale(1.1);
+    transition: ease-in;
+    transition-duration: 100ms;
 }
