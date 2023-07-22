@@ -36,6 +36,12 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
   const [selectedPicture, setSelectedPicture] = useState('');
   const [commentText, setCommentText] = useState('');
   const [postComments, setPostComments] = useState<Comment[]>(comments);
+  const [postLikes, setLikes] = useState(0);
+  
+  const handleLikeClick = () => {
+    setLikes(likes + 1);
+  };
+
 
   const openModal = (picture: string) => {
     setSelectedPicture(picture);
@@ -87,7 +93,7 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
       display: 'flex',
     },
   };
-
+  const likeBtnClass = likes > 0 ? 'like-btn like-btn-on' : 'like-btn';
   return (
     <div id="post-wrapper">
       <div className="social-media-post-card">
@@ -99,8 +105,9 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
         />
 
         <div className="post-buttons">
-          <button className="like-btn">{likes} Me gusta</button>
-          <button className="comment-btn">{comments.length} Comentar</button>
+          <button className="like-btn" onClick={handleLikeClick}>{postLikes} Me gusta</button>
+          <button className="comment-btn">{postComments.length} Comentarios</button>
+
           <button className="share-btn">{shares} Compartir</button>
         </div>
 
@@ -143,9 +150,9 @@ const SocialMediaPost: React.FC<SocialMediaPostProps> = ({
             </div>
 
             <div className="modal-buttons">
-              <button className="like-btn">{likes} Me gusta</button>
+              <button className="like-btn">{postLikes} Me gusta</button>
               <button className="comment-btn">
-                {comments.length} Comentar
+                {postComments.length} Comentarios
               </button>
               <button className="share-btn">{shares} Compartir</button>
             </div>
