@@ -243,17 +243,19 @@ li {
     margin-bottom: 16px;
 
     width: 740px;
-    min-height: 706px;
+    height: auto;
 
 
 }
 
 .post-image {
-    width: 100%;
+    max-width: 700px;
     height: auto;
     margin-bottom: 16px;
     border-radius: 12px;
 }
+
+
 
 .post-buttons {
     display: flex;
@@ -609,13 +611,21 @@ button.comment-button {
     flex-direction: row;
 }
 
+div.ReactModalPortal > div > div {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center ;
+}
+
 div.ReactModalPortal > div > div    > img {
-    max-width: 1080px;
-    max-height: 720px;
+    max-width: 700px;
+    max-height: auto;
     margin-bottom: 10px;
     position: absolute;
-    top: 30%;
-    left: 20%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+
 }
 
 .nav-button {
@@ -725,6 +735,7 @@ hr {
     background-color: #929292;
     padding: 20px;
     border-radius: 10px;
+    order: 1;
 }
 
 #create-wrapper > form {
@@ -760,4 +771,8 @@ hr {
     transform: scale(1.1);
     transition: ease-in;
     transition-duration: 100ms;
+}
+
+.like-btn-on {
+    background-color: rgb(81, 209, 226);
 }
